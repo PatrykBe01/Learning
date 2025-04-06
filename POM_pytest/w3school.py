@@ -35,9 +35,9 @@ firstName = driver.find_element(By.ID, 'fname')
 
 if firstName.is_enabled():
     firstName.clear()
-    firstName.send_keys('Kamil')
+    firstName.send_keys('Patryk')
 else:
-    print('Nie da się wpisać')
+    print('can not enter')
 
 driver.close()
 driver.quit()

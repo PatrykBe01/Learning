@@ -13,7 +13,7 @@ test_data = [
     ('problem_user', 'XX', 'https://www.saucedemo.com/'),
     ('performance_glitch_user', 'XX', 'https://www.saucedemo.com/')
 ]
-@pytest.mark.skip(reason='Bo tak')
+@pytest.mark.skip(reason='any')
 @pytest.mark.parametrize('username, passwd, url', test_data)
 def test_login_page_standard_user(username, passwd, url):
     driver = webdriver.Chrome()
@@ -37,11 +37,11 @@ def test_login_page_standard_user(username, passwd, url):
         print('Zamykam stronę')
         page.close()
 
-@pytest.mark.skipif(len('piesek') == 5, reason='piesek jeszcze za mały')
+@pytest.mark.skipif(len('test') == 5, reason='false')
 def test1():
     assert 2 + 3 == 5
 
-@pytest.mark.xfail(reason='nie nasz dział')
+@pytest.mark.xfail(reason='not our department')
 def test2():
     assert 2 + 3 == 5
 
